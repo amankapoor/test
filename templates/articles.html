@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+        <title>{{.PostTitle}} - GolangAce</title>
+
+        <link rel="stylesheet" type="text/css" href="/static/css/normalize.css"
+        
+        <meta charset = "utf8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content= {{.PostDescription}}/>
+
+        <!--Open graph tags -->
+        <meta property="og:url" content= {{.PostPermalink}} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content= {{.PostFacebookTitle}}} />
+        <meta property="og:description" content= {{.PostFacebookDescription}} />
+        <meta property="og:image" content= {{.PostFacebookFeaturedImageURL}} />
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:ttl" content={{.PostTTLForFB}} />
+        <meta property="og:updated_time" content={{.PostLastUpdatedTimeStamp}} />
+
+        <!--Twitter Cards-->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:description" content= {{.PostTwitterDescription}} />
+        <meta name="twitter:title" content= {{.PostTwitterTitle}} />
+        <meta name="twitter:image" content= {{.PostTwitterFeaturedImageURL}} />
+        <meta name="twitter:site" content="@GolangAce"/>
+        <meta name="twitter:creator" content= {{.AuthorTwitterHandle}} />
+    </head>
+
+    <body>
+        <div class = "header">
+            <div class = "navbar"></div>
+        </div>
+
+        <div class = "preContent">
+            <h1>{{.PostTitle}}</h1>
+            <h4>{{.PostSubheading}}</h4>
+            <img src = {{.PostFeaturedImageURL}} alt = {{.PostFeaturedImageAltTag}} title = {{.PostFeaturedImageTitleTag}} />
+            <div class = "authorCard">
+                <span class = "authorImageThumb"></span>
+                <span class = "authorName" href = {{.AuthorProfileURL}} ></span>
+                <span class = "publishedDate"></span>
+                <!--put if clause here for updated date and put a span then-->
+                <div class = "authorBio"></div>
+            </div>
+        </div>    
+
+        <div class = "mainContent">
+            <div class = "article"><!--paragraphs will go here--></div>
+        </div>
+
+        <div class = "postContent">
+            <div class = "sharing"><!--sharing module will go here--></div>
+            <div class = "subscribe"><!--subscription module will go here--></div>
+            <div class = "readMore"><!--read more will go here--></div>
+        </div>
+
+        <div class = "footer">
+           <div class = "mainFooter">
+               <span><!--links to categories and other pages--></span>
+           </div>
+           <div class = "subFooter">
+                <div id="copyright_notice">
+                    <p>Copyright &copy; <a target="_blank" href="http://golangace.com">GolangAce</a>. All Rights
+                    Reserved</p>
+                </div>
+               <span><!--Terms of Use, Privacy Policy, acknowledgements if any links goes here--></span>
+           </div>
+        </div>
+    </body>
+
+    <script>
+        /* GA and other analytics will go here */
+    </script>
+</html>
